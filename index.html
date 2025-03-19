@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice-Based Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rubik Dirt', cursive;
+            background-color: #003049;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #457b9d;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .choice {
+            display: block;
+            background-color: #f4a261;
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .choice:hover {
+            background-color: #e76f51;
+            color: white;
+        }
+        .popup {
+            position: fixed;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border: 2px solid red;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Consumption Nightmare</h1>
+        <p>You stand in front of two doors, each leading to a different fate.</p>
+        <a class="choice" href="choice1.html">Enter the Door of Infinite Discounts</a>
+        <a class="choice" href="choice2.html">Step into the Realm of Luxury</a>
+    </div>
+    
+    <script>
+        function createPopup() {
+            let popup = document.createElement("div");
+            popup.className = "popup";
+            popup.style.top = Math.random() * window.innerHeight + "px";
+            popup.style.left = Math.random() * window.innerWidth + "px";
+            popup.innerHTML = "<strong>FLASH SALE! </strong> Click now for 90% off (or not)";
+            document.body.appendChild(popup);
+            popup.style.display = "block";
+            setTimeout(() => popup.remove(), 3000);
+        }
+        
+        setInterval(createPopup, 2000);
+    </script>
+</body>
+</html>
