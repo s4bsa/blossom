@@ -58,6 +58,20 @@
             text-align: center;
         }
 
+        #popupMessage {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
         #message {
             margin-top: 20px;
             font-size: 1.2rem;
@@ -78,19 +92,30 @@
         <div id="message"></div>
     </div>
 
+    <div id="popupMessage">
+        <p>You clicked the wrong option. Try again!</p>
+        <button id="closePopupButton">Close</button>
+    </div>
+
     <script>
         const mistakeButton = document.getElementById("mistakeButton");
         const offerButton = document.getElementById("offerButton");
+        const popupMessage = document.getElementById("popupMessage");
+        const closePopupButton = document.getElementById("closePopupButton");
 
         let firstClick = true;
 
         mistakeButton.addEventListener("click", () => {
             if (firstClick) {
-                alert("Oh...no problem. Click again to leave the shop.");
+                popupMessage.style.display = "block";
                 firstClick = false;
             } else {
-                window.location.href = "9.html";
+                window.location.href = "4.html";
             }
+        });
+
+        closePopupButton.addEventListener("click", () => {
+            popupMessage.style.display = "none";
         });
 
         offerButton.addEventListener("click", () => {
