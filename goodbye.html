@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Boutique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("outside.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ff6f61;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 203, 203, 0.8); 
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6f61;
+        }
+
+        button {
+            background-color: #ffcbcb;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blossom Boutique</h1>
+    </header>
+
+    <div class="content">
+        <button id="homeButton">Revisit</button>
+    </div>
+
+    <script>
+        const homeButton = document.getElementById("homeButton");
+
+        homeButton.addEventListener("click", () => {
+            window.location.href = "./";
+        });
+    </script>
+</body>
+</html>
