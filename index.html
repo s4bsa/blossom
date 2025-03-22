@@ -72,22 +72,22 @@
     </header>
 
     <div class="content">
-        <button id="shopButton">I'm not sure</button>
-        <button id="aboutButton">Bouquet please!</button>
+        <button id="notSureButton">I'm not sure</button>
+        <button id="bouquetButton">Bouquet please!</button>
 
         <div id="message"></div>
     </div>
 
     <script>
-        const lostButton = document.getElementById("lostButton");
-        const flowerButton = document.getElementById("flowerButton");
+        const notSureButton = document.getElementById("notSureButton");
+        const bouquetButton = document.getElementById("bouquetButton");
         const message = document.getElementById("message");
 
-        document.getElementById("lostButton").addEventListener("click", () => {
+        notSureButton.addEventListener("click", () => {
             window.location.href = "2.html";
         });
 
-        document.getElementById("flowerButton").addEventListener("click", () => {
+        bouquetButton.addEventListener("click", () => {
             window.location.href = "3.html";
         });
     </script>
