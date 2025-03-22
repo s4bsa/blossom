@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spring Blossom Flower Store</title>
+    <title>Blossom Boutique</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,28 +67,34 @@
 </head>
 <body>
     <header>
-        <h1>Spring Blossom Flower Store</h1>
-        <p>Your one-stop shop for the freshest blooms of the season!</p>
+        <h1>Blossom Boutique</h1>
+        <p>Seems like you're having trouble picking. No problem! Would you like to hear what we offer?</p>
     </header>
 
     <div class="content">
-        <button id="shopButton">Shop Now</button>
-        <button id="aboutButton">Learn More</button>
+        <button id="mistakeButton">Sorry! I made a mistake.</button>
+        <button id="offerButton">Yes!</button>
 
         <div id="message"></div>
     </div>
 
     <script>
-        const shopButton = document.getElementById("shopButton");
-        const aboutButton = document.getElementById("aboutButton");
-        const message = document.getElementById("message");
+        const mistakeButton = document.getElementById("mistakeButton");
+        const offerButton = document.getElementById("offerButton");
 
-        shopButton.addEventListener("click", () => {
-            message.textContent = "Explore our collection of roses, tulips, daisies, and more!";
+        let firstClick = true;
+
+        mistakeButton.addEventListener("click", () => {
+            if (firstClick) {
+                alert("Oh...no problem. Click again to leave the shop.");
+                firstClick = false;
+            } else {
+                window.location.href = "9.html";
+            }
         });
 
-        aboutButton.addEventListener("click", () => {
-            message.textContent = "Spring Blossom has been providing the freshest flowers since 1995.";
+        offerButton.addEventListener("click", () => {
+            window.location.href = "5.html";
         });
     </script>
 </body>
