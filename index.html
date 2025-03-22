@@ -3,70 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choice-Based Story</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Spring Blossom Flower Store</title>
     <style>
         body {
-            font-family: 'Rubik Dirt', cursive;
-            background-color: #003049;
-            color: white;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f7e1d7, #edafb8);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #4a5759;
+        }
+
+        header {
             text-align: center;
-            padding: 50px;
-        }
-        .container {
-            background-color: #457b9d;
             padding: 20px;
-            border-radius: 10px;
-            width: 50%;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            background-color: #dedbd2;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .choice {
-            display: block;
-            background-color: #f4a261;
-            color: black;
-            padding: 10px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #edafb8;
+        }
+
+        button {
+            background-color: #b0c4b1;
+            border: none;
+            padding: 10px 20px;
             margin: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .choice:hover {
-            background-color: #e76f51;
-            color: white;
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
-        .popup {
-            position: fixed;
-            background-color: white;
-            color: black;
-            padding: 15px;
-            border: 2px solid red;
-            box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-            display: none;
+
+        button:active {
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #4a5759;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Consumption Nightmare</h1>
-        <p>You stand in front of two doors, each leading to a different fate.</p>
-        <a class="choice" href="choice1.html">Enter the Door of Infinite Discounts</a>
-        <a class="choice" href="choice2.html">Step into the Realm of Luxury</a>
+    <header>
+        <h1>Spring Blossom Flower Store</h1>
+        <p>Your one-stop shop for the freshest blooms of the season!</p>
+    </header>
+
+    <div class="content">
+        <button id="shopButton">Shop Now</button>
+        <button id="aboutButton">Learn More</button>
+
+        <div id="message"></div>
     </div>
-    
+
     <script>
-        function createPopup() {
-            let popup = document.createElement("div");
-            popup.className = "popup";
-            popup.style.top = Math.random() * window.innerHeight + "px";
-            popup.style.left = Math.random() * window.innerWidth + "px";
-            popup.innerHTML = "<strong>FLASH SALE! </strong> Click now for 90% off (or not)";
-            document.body.appendChild(popup);
-            popup.style.display = "block";
-            setTimeout(() => popup.remove(), 3000);
-        }
-        
-        setInterval(createPopup, 2000);
+        const shopButton = document.getElementById("shopButton");
+        const aboutButton = document.getElementById("aboutButton");
+        const message = document.getElementById("message");
+
+        shopButton.addEventListener("click", () => {
+            message.textContent = "Explore our collection of roses, tulips, daisies, and more!";
+        });
+
+        aboutButton.addEventListener("click", () => {
+            message.textContent = "Spring Blossom has been providing the freshest flowers since 1995.";
+        });
     </script>
 </body>
 </html>
