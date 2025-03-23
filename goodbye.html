@@ -56,34 +56,14 @@
 
         .content {
             text-align: center;
-        }
-
-        #closeButton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #ff8c94;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 1.2rem;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        #closeButton:hover {
-            background-color: #ff6f61;
+            margin-top: 50px; /* Added margin to avoid overlap with header */
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Blossom Boutique</h1>
-        <p>‎ </p>
     </header>
-
-    <button id="closeButton" onclick="window.close();">Exit</button>
 
     <div class="content">
         <button id="homeButton">Revisit shop</button>
@@ -98,4 +78,3 @@
     </script>
 </body>
 </html>
-
