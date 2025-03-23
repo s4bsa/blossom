@@ -31,7 +31,14 @@
         }
 
         .content {
+            display: flex;
+            justify-content: center;
             margin: 20px;
+        }
+
+        .content div {
+            position: relative;
+            margin: 10px;
             text-align: center;
         }
 
@@ -41,6 +48,28 @@
             margin: 10px;
             border-radius: 12px;
             cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .content div:hover .image-overlay {
+            opacity: 1;
         }
 
         button {
@@ -81,14 +110,18 @@
     </header>
 
     <div class="content">
-        <a href="thanks.html">
-            <img src="daisies2.jpg" alt="Small Daisy Bouquet" id="smallBouquetImage">
-        </a>
-    </div>
-    <div class="content">
-        <a href="thanks.html">
-            <img src="daisies.jpg" alt="Large Daisy Bouquet" id="largeBouquetImage">
-        </a>
+        <div>
+            <a href="thanks.html">
+                <img src="daisies2.jpg" alt="Small Daisy Bouquet" id="smallBouquetImage">
+                <div class="image-overlay">Small Bouquet</div>
+            </a>
+        </div>
+        <div>
+            <a href="thanks.html">
+                <img src="daisies.jpg" alt="Large Daisy Bouquet" id="largeBouquetImage">
+                <div class="image-overlay">Large Bouquet</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>
