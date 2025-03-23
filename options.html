@@ -14,7 +14,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            height: 100vh;
+            min-height: 100vh;
             color: #ff8c94;
         }
 
@@ -26,6 +26,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -34,7 +35,7 @@
         }
 
         .content {
-            margin-top: 100px;
+            padding-top: 120px;
             text-align: center;
         }
 
@@ -51,13 +52,13 @@
             height: 300px;
             overflow: hidden;
             cursor: pointer;
+            border-radius: 10px;
         }
 
         .flower img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
         }
 
         .out-of-stock {
@@ -67,7 +68,7 @@
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -92,25 +93,20 @@
             <div class="flower" onclick="window.location.href='tulips.html'">
                 <img src="tulips.jpg" alt="Tulips">
             </div>
-
             <div class="flower" onclick="window.location.href='roses.html'">
                 <img src="roses.jpg" alt="Roses">
             </div>
-
-            <div class="flower" onclick="window.location.href='daisies.html'">
+            <div class="flower" onclick="window.location.href='daisies1.html'">
                 <img src="daisies.jpg" alt="Daisies">
             </div>
-
             <div class="flower">
                 <img src="sunflowers.jpg" alt="Sunflowers">
                 <div class="out-of-stock">Out of stock</div>
             </div>
-
             <div class="flower">
                 <img src="lilies.jpg" alt="Lilies">
                 <div class="out-of-stock">Out of stock</div>
             </div>
-
             <div class="flower">
                 <img src="orchids.jpg" alt="Orchids">
                 <div class="out-of-stock">Out of stock</div>
