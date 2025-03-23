@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Boutique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff7e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ff8c94;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcbcb;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6f61;
+        }
+
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #tulipsImage {
+            width: 300px; 
+            height: 300px; 
+            margin: 10px;
+            border-radius: 12px;
+        }
+
+        button {
+            background-color: #ffcbcb;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(1.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blossom Boutique</h1>
+        <p>Here are your tulips!</p>
+        <p>Would you like to add daisies?</p>
+    </header>
+
+    <div class="content">
+        <img src="tulips.jpg" alt="Tulips" id="tulipsImage">
+
+        <div>
+            <button id="yesButton">Yes please!</button>
+            <button id="noButton">No thank you!</button>
+        </div>
+    </div>
+
+    <script>
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+
+        yesButton.addEventListener("click", () => {
+            window.location.href = "daisies.html";
+        });
+
+        noButton.addEventListener("click", () => {
+            window.location.href = "goodbye.html";
+        });
+    </script>
+</body>
+</html>
