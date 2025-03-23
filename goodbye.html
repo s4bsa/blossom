@@ -42,7 +42,6 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
-            margin: 10px;
         }
 
         button:hover {
@@ -64,30 +63,19 @@
 <body>
     <header>
         <h1>Blossom Boutique</h1>
-        <p>Thanks so much for stopping by!</p>
-        <p>See you next time!</p>
+        <p>Thanks so much for stopping by! See you next time!</p>
     </header>
 
     <div class="content">
         <button id="homeButton">Revisit shop</button>
-        <button id="leaveButton">Leave Permanently</button>
     </div>
 
     <script>
         const homeButton = document.getElementById("homeButton");
-        const leaveButton = document.getElementById("leaveButton");
 
         homeButton.addEventListener("click", () => {
             window.location.href = "./"; 
         });
-
-        leaveButton.addEventListener("click", () => {
-            const confirmation = confirm("Warning: This will close your window.");
-            if (confirmation) {
-                window.close();
-            }
-        });
     </script>
 </body>
 </html>
-
