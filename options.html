@@ -36,7 +36,7 @@
         }
 
         .content {
-            padding-top: 120px;
+            padding-top: 160px; /* Increased padding to ensure images are below the header */
             text-align: center;
             width: 100%;
             max-width: 1200px;
@@ -71,6 +71,24 @@
             object-fit: cover;
         }
 
+        .flower-name {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .flower:hover .flower-name {
+            opacity: 1;
+        }
+
         .out-of-stock {
             position: absolute;
             top: 0;
@@ -102,12 +120,15 @@
         <div class="gallery">
             <div class="flower" onclick="window.location.href='tulips.html'">
                 <img src="tulips.jpg" alt="Tulips">
+                <div class="flower-name">Tulips</div>
             </div>
             <div class="flower" onclick="window.location.href='roses.html'">
                 <img src="roses.jpg" alt="Roses">
+                <div class="flower-name">Roses</div>
             </div>
             <div class="flower" onclick="window.location.href='daisies1.html'">
-                <img src="daisies.jpg" alt="Daisies">
+                <img src="daisies1.jpg" alt="Daisies">
+                <div class="flower-name">Daisies</div>
             </div>
             <div class="flower">
                 <img src="sunflowers.jpg" alt="Sunflowers">
@@ -125,4 +146,3 @@
     </div>
 </body>
 </html>
-
