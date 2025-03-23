@@ -30,6 +30,11 @@
             color: #ff6f61;
         }
 
+        .content {
+            text-align: center;
+            padding-top: 80px;
+        }
+
         button {
             background-color: #ffcbcb;
             border: none;
@@ -53,11 +58,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .content {
-            text-align: center;
-            padding-top: 80px; 
-        }
-
         #popupMessage {
             display: none;
             position: fixed;
@@ -70,6 +70,10 @@
             border-radius: 10px;
             text-align: center;
             z-index: 1000;
+        }
+
+        .content button {
+            display: inline-block;
         }
     </style>
 </head>
@@ -105,7 +109,7 @@
         });
 
         offerButton.addEventListener("click", () => {
-            window.location.href = "5.html";
+            window.location.href = "options.html";
         });
     </script>
 </body>
