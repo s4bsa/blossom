@@ -34,14 +34,18 @@
             display: flex;
             justify-content: center;
             margin: 20px;
+            flex-wrap: wrap;
         }
 
         .content div {
             margin: 10px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        #rosesImage {
+        .rosesImage {
             width: 300px; 
             height: 300px; 
             margin: 10px;
@@ -76,10 +80,6 @@
             font-size: 1.2rem;
             color: #ff6f61;
         }
-
-        .content a:last-child button {
-            margin-top: -10px;
-        }
     </style>
 </head>
 <body>
@@ -91,11 +91,11 @@
 
     <div class="content">
         <div>
-            <img src="roses2.jpg" alt="Pink Roses" id="rosesImage">
+            <img src="roses2.jpg" alt="Pink Roses" class="rosesImage">
             <a href="thanks.html"><button>Pink</button></a>
         </div>
         <div>
-            <img src="roses.jpg" alt="Red Roses" id="rosesImage">
+            <img src="roses.jpg" alt="Red Roses" class="rosesImage">
             <a href="thanks.html"><button>Red</button></a>
         </div>
     </div>
