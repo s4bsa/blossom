@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blossom Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #fff7e6;
+            color: #ff8c94;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            color: #ff8c94;
         }
 
         header {
@@ -23,11 +19,7 @@
             padding: 20px;
             background-color: #ffcbcb;
             width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
         }
 
         h1 {
@@ -35,19 +27,12 @@
             color: #ff6f61;
         }
 
-        .content {
-            padding-top: 160px; /* Increased padding to ensure images are below the header */
-            text-align: center;
-            width: 100%;
-            max-width: 1200px;
-        }
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             justify-items: center;
-            width: 100%;
+            padding-top: 60px;
         }
 
         .flower {
@@ -116,33 +101,36 @@
         <p>Here are all our current options:</p>
     </header>
 
-    <div class="content">
-        <div class="gallery">
-            <div class="flower" onclick="window.location.href='tulips.html'">
+    <div class="container mt-5">
+        <div class="row gallery">
+            <div class="col-md-4 flower" onclick="window.location.href='tulips.html'">
                 <img src="tulips.jpg" alt="Tulips">
                 <div class="flower-name">Tulips</div>
             </div>
-            <div class="flower" onclick="window.location.href='roses.html'">
+            <div class="col-md-4 flower" onclick="window.location.href='roses.html'">
                 <img src="roses.jpg" alt="Roses">
                 <div class="flower-name">Roses</div>
             </div>
-            <div class="flower" onclick="window.location.href='daisies1.html'">
+            <div class="col-md-4 flower" onclick="window.location.href='daisies.html'">
                 <img src="daisies1.jpg" alt="Daisies">
                 <div class="flower-name">Daisies</div>
             </div>
-            <div class="flower">
+            <div class="col-md-4 flower">
                 <img src="sunflowers.jpg" alt="Sunflowers">
                 <div class="out-of-stock">Out of stock</div>
             </div>
-            <div class="flower">
+            <div class="col-md-4 flower">
                 <img src="lilies.jpg" alt="Lilies">
                 <div class="out-of-stock">Out of stock</div>
             </div>
-            <div class="flower">
+            <div class="col-md-4 flower">
                 <img src="orchids.jpg" alt="Orchids">
                 <div class="out-of-stock">Out of stock</div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
